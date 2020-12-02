@@ -11,10 +11,8 @@ namespace AdventOfCode2020.Day01
         /// <inheritdoc />
         public override void Run()
         {
-            using var f = File.OpenText(InputFile());
-            string s;
-            while ((s = f.ReadLine()) != null)
-                _numbers.Add(int.Parse(s));
+            foreach (var line in InputLines())
+                _numbers.Add(int.Parse(line));
             
             Part1();
             Part2();
